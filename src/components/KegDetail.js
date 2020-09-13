@@ -11,7 +11,7 @@ function KegDetail(props) {
         ABV: {props.abv} - IBU: {props.ibu}
       </span>
       <span>{props.flavorProfile}</span>
-      <span>{props.price}</span>
+      <span>${props.price}</span>
     </React.Fragment>
   );
 }

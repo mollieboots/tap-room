@@ -1,7 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function NewKegForm(props) {
+function EditKegForm(props) {
+  const { keg } = props;
+
+  function handleEditKegFormSubmission(event) {
+    event.preventDefault();
+    props.onEditKeg({name: event.target.name.value, brewery: event.target.brewery.value, abv: event.target.abv.value, ibu: event.target.ibu.value, flavorProfile: event.target.flavorProfile.value, id: keg.id});
+  }
+
   return (
     <React.Fragment>
       <h1>Add a Keg</h1>
@@ -9,7 +16,7 @@ function NewKegForm(props) {
         <input
           type='text'
           name='name'
-          placeholder='Name' />
+          placeholder='{props.name}' />
         <input
           type='text'
           name='brewery'
@@ -29,15 +36,15 @@ function NewKegForm(props) {
           type='number'
           name='price'
           placeholder='Price' />
-        <button class="btn btn-sucess" type='submit'>Add New Keg</button>
+        <button type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>
   );
 }
 
-NewKegForm.propTypes = {
+EditKegForm.propTypes = {
   formSubmissionHandler: PropTypes.func,
   buttonText: PropTypes.string
 };
 
-export default NewKegForm;
+export default EditKegForm;

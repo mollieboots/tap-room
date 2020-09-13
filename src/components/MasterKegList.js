@@ -1,3 +1,5 @@
+import { v4 } from 'uuid';
+
 const masterTapList = [
   {
     brewery: "pFriem",
@@ -6,6 +8,7 @@ const masterTapList = [
     ibu: "35",
     flavorProfile: "Crisp, Snappy, Floral Hops",
     price: 5,
+    id: v4()
   },
   {
     brewery: "Ninkasi",
@@ -14,6 +17,7 @@ const masterTapList = [
     ibu: "66",
     flavorProfile: "Sweet, tropical tang gives way to a hoppy finish",
     price: 5,
+    id: v4()
   },
   {
     brewery: "Ancestry",
@@ -22,6 +26,7 @@ const masterTapList = [
     ibu: "21",
     flavorProfile: "A light bodied, malty ale with caramel and a touch of roast.",
     price: 5,
+    id: v4()
   },
   {
     brewery: "Stoup",
@@ -30,6 +35,7 @@ const masterTapList = [
     ibu: "N/A",
     flavorProfile: "Cascade and Citra dry-hopped",
     price: 5,
+    id: v4()
   },
 ];
 
